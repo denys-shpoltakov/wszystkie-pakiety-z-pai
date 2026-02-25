@@ -1,0 +1,169 @@
+/* 
+CSS (Cascading Style Sheets) to język, który odpowiada za wygląd strony internetowej.
+HTML daje strukturę, a CSS decyduje o tym, jak to wszystko się prezentuje – kolory, 
+czcionki, odstępy, układ na stronie, animacje (za to wwszystko odpowiadją style css). 
+
+ W przypadku HTML i CSS, bardzo często porównuje się te technologie do budowy domu.
+HTML to ściany, dach, okna, fundamenty - ogólnie mówiąc konstrukcja.
+CSS pełni rolę wykończeniową czyli nakłada farby na tynki, dekoruje cały dom.
+
+Bez CSS wszystkie strony wyglądałyby jak czarno-biały dokument tekstowy.
+Dzięki CSS mamy kolorowe przyciski, wyrównane układy, responsywne menu i animacje. 
+
+
+-----------------------------------------------------------------------
+
+Kombinatory
+
+Kombinatory to specjalne „łączniki” między selektorami. Dzięki nim możemy bardzo dokładnie wskazać, 
+który element na stronie ma dostać styl.
+
+------------------------------
+
+Potomek (spacja A B)
+Mówi: „Znajdź wszystkie elementy B, które są gdzieś wewnątrz A (na dowolnym poziomie).”
+
+Przykład:
+div p { color: red; } 
+
+Wszystkie <p> wewnątrz <div> zmienią kolor na czerwony. Nieważne, czy są bezpośrednio w div, czy głębiej.
+
+------------------------------
+
+Dziecko (A > B)
+Mówi: „Znajdź elementy B, które są bezpośrednimi dziećmi A.”
+Przykład:
+div > p { color: blue; }
+
+Tylko <p>, które są od razu w <div>. Wnuki i prawnuki już się nie liczą.
+
+------------------------------
+
+Sąsiadujący brat (A + B)
+Mówi: „Znajdź element B, który stoi tuż po A (ma tego samego rodzica).”
+Przykład: 
+h1 + p { font-weight: bold; }
+
+Tylko pierwszy <p> po <h1> będzie pogrubiony.
+
+------------------------------
+
+Ogólny brat (A ~ B)
+Mówi: „Znajdź wszystkie elementy B, które są rodzeństwem A, ale stoją gdzieś dalej po nim.”
+Przykład: 
+h1 ~ p { color: green; }
+
+Wszystkie <p> w tym samym kontenerze, które występują po <h1>.
+
+------------------------------------------------------------------------------
+
+Selektory
+Selektor to część reguły CSS, która mówi „do jakiego elementu na stronie zastosować styl”.
+Można powiedzieć, że selektor to adres, a deklaracje CSS to wygląd pod tym adresem.
+
+Selektory można podzielić na trzy grupy - proste, złożone (łączone), specjalne.
+Proste: 
+* (wszystkie elementy)
+tagu np. h1 {}; p {}; div {};
+klasy .nazwa-klasy {}
+id #nazwa-id
+atrybutu [type="text"]
+
+Złożone: 
+
+p.note { color: red; } -  akapity z klasą "note" 
+input[type="email"] { border: 1px solid; }
+
+Specjalne: 
+
+pseudoklasy – :hover, :first-child, :nth-child(odd),
+pseudoelementy – ::before, ::after, ::first-letter.
+
+
+Kombinator to znak (spacja, >, +, ~), który określa relację między dwoma selektorami.
+Czyli kombiantor nie działa samodzielnie – łączy selektory i pozwala bardziej precyzyjnie wskazać elementy.
+
+Przykłady:
+
+div p → wszystkie p będące potomkami div,
+
+div > p → p będące bezpośrednim dzieckiem div,
+
+h1 + p → pierwszy p zaraz po h1,
+
+h1 ~ p → wszystkie p będące rodzeństwem h1 i stojące po nim.
+
+Różnica – selektor vs. kombinator
+
+Selektor: wskazuje konkretny element lub grupę elementów 
+(np. wszystkie <p>, wszystkie .btn, pierwszy dziecko listy).
+
+Kombinator: mówi jak te elementy są ze sobą powiązane w drzewie HTML 
+(rodzic–dziecko, rodzeństwo itd.).
+
+Selektor = kogo wybierasz.
+Kombinator = w jakiej relacji ten ktoś jest do innych elementów.
+
+
+---------------------------------------------------------
+
+https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/
+
+Pseudoklasy
+
+Pseudoklasa to słowo kluczowe dodawane do selektora (po :), które opisuje stan elementu 
+albo jego pozycję w strukturze. Dzięki pseudoklasom możemy stylować elementy 
+dynamicznie (np. po najechaniu myszką, w trakcie klikania, gdy są puste, wybrane, 
+niepoprawne itd.).
+
+
+:hover – element, gdy najedziemy myszką.
+:active – element podczas klikania.
+:focus – element, który ma fokus (np. input po kliknięciu).
+:first-child / :last-child – pierwszy / ostatni element w rodzicu.
+:nth-child(n) – konkretny element wg kolejności.
+:nth-of-type(n) – element wg kolejności danego typu.
+:not(selector) – wybiera wszystko, co nie pasuje.
+:focus-visible - działa podobnie do :focus, ale tylko wtedy, gdy fokus jest widoczny 
+(np. przy tabulatorze, a nie przy kliknięciu myszą).
+:checked - działa na pola formularzy (checkbox, radio).
+:disabled, :enabled - stylowanie pól formularzy zależnie od stanu.
+:has() - nowość od 2024 roku, pozwala stylować element na podstawie tego, co zawiera:
+Przykład: 
+Ostyluj <article>, jeśli w środku ma obrazek 
+
+article:has(img) {
+  border: 2px solid green;
+}
+
+Ostyluj <label>, jeśli ma zaznaczonego checkboxa 
+
+label:has(input:checked) {
+  background: yellow;
+}
+
+
+-------------------------------------------------------
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+
+Pseudoelementy 
+
+Pseudoelement to słowo kluczowe z podwójnym dwukropkiem ::, 
+które pozwala wystylizować część elementu albo dodać wirtualny element.
+
+::before - dodaje treść przed elementem.
+Przykład: 
+li::before { content: "• "; color: red; }
+
+::after - dodaje treść po elemencie.
+Przykład: 
+button::after { content: " ✅"; }
+
+::first-letter - stylizuje pierwszą literę tekstu.
+Przykład: 
+p::first-letter { font-size: 2em; color: blue; }
+
+
+
+*/

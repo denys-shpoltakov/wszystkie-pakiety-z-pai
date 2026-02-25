@@ -1,0 +1,191 @@
+/* Zmienne w CSS: 
+
+Definiowanie zmiennych
+
+Zmienne CSS definiujemy wewnątrz selektora z --nazwa.
+Najczęściej umieszcza się je w :root, żeby były globalne.
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --base-padding: 16px;
+}
+
+---------------------------------------------------------------------
+
+Używanie zmiennych
+
+Do odwoływania się używamy var(--nazwa)
+
+Przykład użycia: 
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: var(--base-padding);
+} 
+  
+
+---------------------------------------------------------------------
+
+
+Podstawowe najczęściej wykorzystywane właściwości css: 
+
+Tekst i czcionki
+
+color – ustawia kolor tekstu.
+font-size – określa wielkość czcionki.
+font-family – wybór czcionki (np. Arial, sans-serif).
+font-weight – grubość tekstu (np. normal, bold, 100–900).
+text-align – wyrównanie tekstu (left, right, center, justify).
+text-decoration – dekoracje tekstu (underline, line-through, none).
+line-height – odstęp między liniami tekstu.
+letter-spacing – odstęp między literami.
+
+
+Układ elementów
+
+display – sposób wyświetlania (block, inline, flex, grid, none).
+position – pozycjonowanie (static, relative, absolute, fixed, sticky).
+top, right, bottom, left – przesunięcie elementu przy pozycjonowaniu.
+float – „opływanie” elementu przez inne (obecnie rzadziej używane).
+clear – kontrola opływania (np. clear: both).
+z-index – kolejność nakładania się elementów. 
+
+
+Rozmiary i odstępy
+
+width / height – szerokość i wysokość elementu.
+max-width / min-width – ograniczenia wymiarów.
+margin – odstęp na zewnątrz elementu.
+padding – odstęp wewnątrz elementu.
+border – obramowanie (grubość, styl, kolor).
+box-sizing – określa, czy wymiary obejmują padding i border (content-box / border-box).
+
+
+Tło i kolory
+
+background-color – kolor tła.
+background-image – obraz jako tło.
+background-size – rozmiar tła (cover, contain, wartości px/%).
+background-position – pozycja tła (center, top, 50% 50%).
+opacity – przezroczystość (0–1).
+
+
+Efekty i animacje
+
+transition – animacje przy zmianie właściwości (czas, efekt).
+transform – przekształcenia (scale, rotate, translate).
+animation – definiuje animację z @keyframes.
+box-shadow – cień dla elementów.
+text-shadow – cień dla tekstu.
+cursor – wygląd kursora (pointer, default, move).
+
+
+Flexbox i Grid
+
+display: flex / grid – nowoczesne systemy układu.
+justify-content – wyrównanie w osi głównej (flex/grid).
+align-items – wyrównanie w osi poprzecznej (flex/grid).
+gap – odstęp między elementami w flex/grid.
+grid-template-columns / rows – definicja kolumn i wierszy.
+
+
+Przydatne źródła:
+
+MDN CSS - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+W3Schools - https://www.w3schools.com/cssref/
+CSS Tricks - https://css-tricks.com/almanac/
+CodePen - https://codepen.io/
+
+
+---------------------------------------------------------------------
+
+Ściaga CSS: 
+
+| Właściwość                       | Opis                                                       |
+| -------------------------------- | ---------------------------------------------------------- |
+|   color                          | Kolor tekstu                                               |
+|   font-size                      | Rozmiar czcionki                                           |
+|   font-family                    | Wybór czcionki                                             |
+|   font-weight                    | Grubość czcionki                                           |
+|   text-align                     | Wyrównanie tekstu (left, right, center, justify)           |
+|   text-decoration                | Dekoracje (underline, none, line-through)                  |
+|   line-height                    | Odstęp między liniami                                      |
+|   letter-spacing                 | Odstęp między literami                                     |
+|   display                        | Sposób wyświetlania (block, inline, flex, grid, none)      |
+|   position                       | Pozycjonowanie (static, relative, absolute, fixed, sticky) |
+|   top / right / bottom / left    | Przesunięcia przy pozycjonowaniu                           |
+|   z-index                        | Kolejność nakładania elementów                             |
+|   float                          | Opływanie elementu (left, right)                           |
+|   clear                          | Zatrzymanie opływania (left, right, both)                  |
+|   width / height                 | Szerokość i wysokość                                       |
+|   max-width / min-width          | Ograniczenia rozmiarów                                     |
+|   margin                         | Odstęp na zewnątrz elementu                                |
+|   padding                        | Odstęp wewnątrz elementu                                   |
+|   border                         | Obramowanie elementu                                       |
+|   border-radius                  | Zaokrąglenie rogów (50% = kółko)                           |
+|   box-sizing                     | Sposób liczenia wymiarów (content-box, border-box)         |
+|   background-color               | Kolor tła                                                  |
+|   background-image               | Obraz jako tło                                             |
+|   background-size                | Rozmiar tła (cover, contain)                               |
+|   background-position            | Pozycja tła (center, top, 50% 50%)                         |
+|   opacity                        | Przezroczystość (0–1)                                      |
+|   transition                     | Płynne przejścia                                           |
+|   transform                      | Przekształcenia (rotate, scale, translate)                 |
+|   animation                      | Animacje z @keyframes                                      |
+|   box-shadow                     | Cień elementu                                              |
+|   text-shadow                    | Cień tekstu                                                |
+|   cursor                         | Wygląd kursora (pointer, text, move)                       |
+|   justify-content                | Wyrównanie w osi głównej (flex/grid)                       |
+|   align-items                    | Wyrównanie w osi poprzecznej (flex/grid)                   |
+|   gap                            | Odstęp między elementami w flex/grid                       |
+|   grid-template-columns / rows   | Definicja kolumn i wierszy w grid                          |
+
+
+
+Najczęściej stosowane jednostki CSS: 
+
+
+| Jednostka | Opis                                                          | Typowe zastosowanie               |
+| --------- | ------------------------------------------------------------- | --------------------------------- |
+|   px      | Piksele, najczęściej używana jednostka                        | Wymiary, marginesy, czcionki      |
+|   em      | Względem rozmiaru czcionki elementu nadrzędnego               | Skalowanie tekstu, odstępy        |
+|   rem     | Względem rozmiaru czcionki elementu głównego (`html`)         | Stałe rozmiary tekstu, odstępy    |
+|   %       | Procent w stosunku do elementu nadrzędnego                    | Szerokość, wysokość, marginesy    |
+|   vw      | Procent szerokości okna przeglądarki                          | Layouty responsywne               |
+|   vh      | Procent wysokości okna przeglądarki                           | Sekcje pełnoekranowe              |
+|   dvh     | Dynamic viewport height – faktyczna wysokość ekranu mobilnego | Mobilne layouty fullscreen        |
+|   s       | Sekundy                                                       | Czas animacji, przejść            |
+|   ms      | Milisekundy                                                   | Dokładniejsze animacje, przejścia |
+|   deg     | Stopnie (0–360)                                               | Obrót w transformacjach           |
+
+
+Pozostałe jednostki, o których warto wiedzieć, że istnieją (rzadziej używane podczas tworzenia serwisów webowych): 
+
+
+| Jednostka     | Opis                                                             |
+| ------------- | ---------------------------------------------------------------- |
+|   cm          | Centymetry (druk)                                                |
+|   mm          | Milimetry (druk)                                                 |
+|   in          | Cale (druk)                                                      |
+|   pt          | Punkty typograficzne (1/72 cala)                                 |
+|   pc          | Pica (12 punktów typograficznych)                                |
+|   vmin        | Procent mniejszego wymiaru ekranu                                |
+|   vmax        | Procent większego wymiaru ekranu                                 |
+|   dvw         | Dynamic viewport width                                           |
+|   lvh / lvw   | Large viewport height/width (największy możliwy rozmiar ekranu)  |
+|   svh / svw   | Small viewport height/width (najmniejszy możliwy rozmiar ekranu) |
+|   rad         | Radiany (kąty)                                                   |
+|   turn        | Pełne obroty (1turn = 360°)                                      |
+|   dpi         | Kropki na cal (druk, media queries)                              |
+|   dpcm        | Kropki na centymetr                                              |
+|   dppx        | Punkty na piksel urządzenia (1dppx = 96dpi)                      |
+
+
+
+Przydatne źrodła:
+https://htmlcheatsheet.com/css/
+
+*/

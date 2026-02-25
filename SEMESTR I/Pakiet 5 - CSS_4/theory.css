@@ -1,0 +1,107 @@
+/* Trening position 
+
+
+Position w CSS służy do określenia, w jaki sposób element jest pozycjonowany 
+w dokumencie. 
+Dostępne wartości:
+
+static (domyślna)
+
+Element jest pozycjonowany normalnie, zgodnie z układem dokumentu (flow).
+Wartości top, right, bottom, left nie działają.
+
+
+relative
+
+Element pozostaje w normalnym układzie strony, ale można go przesunąć względem swojej 
+pierwotnej pozycji za pomocą top, right, bottom, left.
+Przesunięcie nie wpływa na inne elementy – zajmowane przez niego miejsce pozostaje 
+takie samo.
+
+
+absolute
+
+Element jest usuwany z normalnego układu strony i pozycjonowany względem najbliższego
+przodka z position: relative/absolute/fixed/sticky.
+Jeśli nie ma takiego przodka, to pozycjonuje się względem całej strony (<html>).
+
+
+fixed
+
+Podobnie do absolute, ale element jest przyklejony do okna przeglądarki (viewport).
+Pozostaje w tym samym miejscu nawet przy przewijaniu strony.
+
+
+sticky
+
+Hybryda relative i fixed.
+
+Element porusza się normalnie (relative), dopóki nie osiągnie wskazanej pozycji 
+(np. top: 0), wtedy „przykleja się” i zachowuje jak fixed — do momentu aż jego kontener 
+przestanie być widoczny.
+
+
+top, right, bottom, left
+
+Są to właściwości przesunięcia, które działają tylko przy elementach z position różnym 
+od static.
+
+top – określa odległość górnej krawędzi elementu od górnej krawędzi elementu odniesienia.
+right – odległość od prawej krawędzi.
+bottom – odległość od dolnej krawędzi.
+left – odległość od lewej krawędzi.
+
+
+Przykład: 
+.box {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+
+----------------------------------------------------------
+
+z-index — co to jest i kiedy działa
+
+z-index ustala kolejność nakładania się elementów (oś Z – “nad/pod”).
+Działa, gdy element jest:
+
+pozycjonowany (position: relative | absolute | fixed | sticky)
+
+Przykład użycia:
+HTML:
+<div class="wrap">
+  <div class="a">A</div>
+  <div class="b">B</div>
+</div>
+CSS: 
+.wrap { position: relative; }
+.a, .b { position: absolute; top: 0; left: 0; }
+.a { z-index: 1; }
+.b { z-index: 2; } /* B przykryje A
+
+----------------------------------------------------------
+
+transform: translate()
+
+Służy do przesuwania elementu względem jego własnej pozycji, a nie względem rodzica.
+
+translateX(n) – przesuwa w poziomie (np. translateX(50px) → o 50px w prawo).
+translateY(n) – przesuwa w pionie (np. translateY(-20px) → o 20px w górę).
+translate(x, y) – przesuwa jednocześnie w osi X i Y.
+
+
+Przykład:
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+Przydatne linki:
+https://www.youtube.com/watch?v=GwZRMYu3n8c
+
+*/
+

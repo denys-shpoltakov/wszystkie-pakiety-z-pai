@@ -1,0 +1,89 @@
+Cookies, LocalStorage i SessionStorage
+
+Czym są cookies (ciasteczka)?
+
+Cookies (czyli „ciasteczka”) to małe dane tekstowe, które przeglądarka 
+zapisuje na komputerze użytkownika.Służą do zapamiętywania informacji 
+między wizytami na stronie internetowej.
+
+Dzięki cookies strona może np.:
+
+zapamiętać, że ktoś się zalogował,
+zapamiętać wybrany język strony,
+ukryć komunikat o cookies, jeśli użytkownik już go zaakceptował.
+
+Czas życia cookie
+
+Każde cookie może mieć określony czas ważności:
+* jeśli nie ustawimy daty wygaśnięcia, cookie zniknie po zamknięciu przeglądarki 
+(tzw. cookie sesyjne),
+* jeśli ustawimy datę lub liczbę dni, będzie przechowywane dłużej (np. 7 dni).
+
+-----------------------------------------------------------------------------------
+
+Jak ustawić, odczytać i usunąć cookie w JavaScript?
+
+Najprostszy sposób:
+document.cookie = "nazwa=wartosc";
+
+Można też dodać czas trwania (w sekundach):
+document.cookie = "user=Tester; max-age=604800"; // 7 dni
+
+Albo do konkretnej ścieżki:
+document.cookie = "theme=dark; path=/";
+
+Usunięcie cookie:
+Ustawiamy takie samo cookie z czasem wygaśnięcia 0.
+
+-----------------------------------------------------------------------------------
+
+Czym jest localStorage?
+
+localStorage to pamięć przeglądarki, w której możemy trwale zapisywać dane po stronie 
+użytkownika. Dane nie znikają po zamknięciu strony ani przeglądarki.
+Każda strona (domena) ma własną przestrzeń.
+Zapisujemy dane w formacie tekstowym (klucz – wartość).
+
+Zapis danych:
+localStorage.setItem("theme", "dark");
+
+Odczyt danych:
+let theme = localStorage.getItem("theme");
+console.log(theme);
+
+Usunięcie danych:
+localStorage.removeItem("theme");
+
+Wyczyszczenie całego magazynu w domenie:
+localStorage.removeItem("theme");
+
+-----------------------------------------------------------------------------------
+
+Czym jest sessionStorage?
+
+Działa tak samo jak localStorage, tylko dane są tymczasowe — znikają po zamknięciu 
+karty przeglądarki.
+
+Przykład:
+sessionStorage.setItem("formStep", "2");
+
+Po zamknięciu zakładki ta informacja zniknie.
+
+-----------------------------------------------------------------------------------
+
+Różnice między cookies, localStorage oraz sessionStorage
+
+| Cecha                | Cookies                 | localStorage          | sessionStorage                          |
+| -------------------- | ----------------------- | --------------------  | --------------------------------------- |
+| Pojemność            | ok. 4 KB                |  ok. 5–10 MB          | ok. 5 MB                                |
+| Widoczne dla serwera | Tak                     |  Nie                  | Nie                                     |
+| Dostępne w JS        | Tak                     |  Tak                  | Tak                                     |
+| Czas trwania         | Ustalany (np. 7 dni)    |  Do usunięcia ręcznie | Do zamknięcia karty                     |
+| Typ danych           | Tekst                   |  Tekst                | Tekst                                   |
+| Zastosowanie         | logowanie, zgody, sesje |  motyw, preferencje   | dane tymczasowe (np. krok w formularzu) |
+
+
+Przydatne linki:
+https://kursjs.pl/kurs/cookies/cookie
+https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+https://www.youtube.com/watch?v=EpoN2cC-kY4

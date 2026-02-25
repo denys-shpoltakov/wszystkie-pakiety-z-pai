@@ -1,0 +1,62 @@
+/* 
+
+RWD (Responsive Web Design) — teoria w pigułce
+
+Na czym to polega? Ten sam serwis ma działać wygodnie / dobrze na różnych szerokościach (urządzeniach).
+Narzędzie kluczowe: media queries — warunki w CSS, które włączają inne style np. od danej szerokości, 
+przy określonej orientacji ekranu czy preferencjach użytkownika (np. ograniczenie ruchu). 
+
+
+Breakpointy — co to jest i jak o nich myśleć?
+
+Breakpoint = punkt, w którym układ potrzebuje zmiany (np. z 1 kolumny na 2).
+Nie są „magiczne”, wynikają z zawartości (content-driven), a nie z modelu telefonu.
+
+Praktyczne, rozsądne progi startowe (przykład): 360px, 640px, 768px, 1024px, 1200px.
+
+Mobile-first: bazowe style dla najmniejszych ekranów, a potem reguły @media (min-width: …).
+
+RWD — praktyka z jasnymi breakpointami
+Breakpointy (min-width, mobile-first)
+
+Nazwy są umowne; używaj ich spójnie w projekcie:
+
+| Alias | Min-width |
+| ----- | --------- |
+| `xs`  | `360px`   |
+| `sm`  | `640px`   |
+| `md`  | `768px`   |
+| `lg`  | `1024px`  |
+| `xl`  | `1200px`  |
+
+
+Przykład:
+
+/* base (mobile) — style domyślne dla < 360px */
+:root { /* np. kolory, spacing */ }
+
+/* >= 360px */
+@media (min-width: 360px) { /* xs */ }
+
+/* >= 640px */
+@media (min-width: 640px) { /* sm */ }
+
+/* >= 768px */
+@media (min-width: 768px) { /* md */ }
+
+/* >= 1024px */
+@media (min-width: 1024px) { /* lg */ }
+
+/* >= 1200px */
+@media (min-width: 1200px) { /* xl */ }
+
+
+
+
+Przydatne źrodła:
+
+https://web.dev/articles/responsive-web-design-basics?hl=pl
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries 
+
+
+*/

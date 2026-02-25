@@ -1,0 +1,39 @@
+/* Wybierz jeden z prezenetowanych szablonów i spróbuj go odwzorować
+responsywnie przy pomocy HTML oraz CSS. 
+
+W widoku mobilnym czcionka powinna mieć 14px, przy minimalnej
+szerokości strony 768px zastosuj czcionki 16px, a powyżej
+1200px 18px. Dla największego nagłówka w widoku mobilnym 
+zastosuj wielkość 24px, a od szerokości 1024px 28px. Każdy
+z kolejnych nagłówków powinieć być mniejszy od swojego od 
+wazniejszego o 2px. Linki po najechaniu mają zmienić kolor 
+na odcień niebieskiego z zachowaniem animacji trwającej 300ms.
+
+Do wykonania zadania użyj dowolnych grafik. 
+Projekt powinien mieć zachowana odpowiednią strukturę. 
+plik index.html oraz katalog css, a w nim style do strony 
+w pliku style.css 
+
+Przy pisaniu styli pamiętaj o podejściu mobile-first. 
+W wersji mobilnej nie musisz ustawiać elementów obok siebie - 
+w przypadku telefonów zachowaj maksymalną czytelność 
+np. teksty, a pod nimi grafika.
+Do wstawienia ikon możesz użyć Font Awesome z cdn. 
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+Przykład użycia ikony z GitHub w HTML: 
+<i class="fa-brands fa-github"></i> 
+
+
+Przydatne linki: 
+https://fontawesome.com/icons 
+https://unsplash.com/
+https://picsum.photos/
+https://i.pravatar.cc/256?u=user21 
+
+*/

@@ -1,0 +1,116 @@
+/* Zad. 1
+Stwórz koło z elementu div
+Utwórz element div i nadaj mu szerokość oraz wysokość (np. 200px).
+Dodaj kolor tła za pomocą background-color.
+Użyj właściwości border-radius: 50%, aby uzyskać kształt koła.
+Dodaj efekt: po najechaniu kursorem (:hover) kolor tła ma zmienić się na niebieski z płynnym przejściem w czasie 0.3s.
+
+Zad. 2
+Stwórz dwa kwadratowe awatary ze zdjęcia i porównaj metody dopasowania obrazu
+Wstaw dwa obrazki prostokątne (np. https://picsum.photos/300/200).
+Pierwszy awatar dopasuj za pomocą width: 100%; height: auto; wewnątrz kwadratowego kontenera.
+Drugi awatar dopasuj za pomocą object-fit: cover; i border-radius: 50%.
+Nadaj obu ramkom takie same wymiary (np. 150×150px).
+Zauważ różnicę:
+w pierwszym przypadku obrazek mieści się cały, ale może nie wypełniać ramki,
+w drugim obrazek zawsze wypełnia ramkę, ale jest przycięty.
+
+Zad. 3
+Utwórz trzy sekcje: header, main, footer.
+Nadaj każdej sekcji inny kolor tła (background-color) i kolor tekstu (color).
+Dodaj wewnętrzne odstępy (padding), aby treść nie przylegała do krawędzi.
+Dodaj zewnętrzne odstępy (margin) tam, gdzie to potrzebne.
+Treść każdej sekcji powinna być czytelna i kontrastowa.
+
+Zad. 4
+Stwórz div z klasą .card.
+Nadaj mu padding, margin, obramowanie (border) oraz zaokrąglone rogi (border-radius).
+Dodaj cień (box-shadow), aby karta odcinała się od tła.
+Wewnątrz karty umieść nagłówek, akapit i przycisk.
+
+Zad. 5
+Poziome menu nawigacyjne.
+Stwórz pasek nawigacji z listą ul i kilkoma elementami li.
+Ustaw je obok siebie za pomocą display: flex i dodaj odstępy (gap).
+Każdy link (a) ma mieć wewnętrzny odstęp (padding).
+Dodaj efekt: po najechaniu (:hover) tło lub kolor tekstu ma się zmieniać.
+
+Zad. 6
+Sekcja pełnoekranowa (hero)
+Utwórz sekcję o wysokości całego ekranu (height: 100dvh).
+Wycentruj treść w pionie i poziomie za pomocą Flexboxa (display: flex; align-items: center; justify-content: center).
+Dodaj tło w dowolnym kolorze.
+Umieść w środku nagłówek i przycisk.
+
+zad. 7
+Dwie kolumny obok siebie (float)
+Utwórz dwa div o klasie .col, każdy o szerokości np. 45%.
+Ustaw je obok siebie za pomocą float: left.
+Dodaj element div z clear: both, aby kolejny tekst zaczynał się pod kolumnami.
+Dodaj kolory tła, aby kolumny były dobrze widoczne.
+
+zad. 8
+Galeria kafelków (Grid)
+Stwórz kontener z display: grid.
+Ustaw grid-template-columns: repeat(3, 1fr) i gap.
+Umieść w nim co najmniej 6 kafelków (prostokątne div z różnymi kolorami).
+Dodaj media query – poniżej 600px szerokości ekranu galeria ma być jednokolumnowa.
+
+zad. 9
+Sekcja “Cennik” z wyróżnioną kartą
+Utwórz 3 karty (np. Plan Podstawowy, Standard, Premium).
+Każda karta ma mieć padding, border, border-radius i box-shadow.
+Karta Premium (środkowa) ma być wyróżniona mocniejszym kolorem lub grubszym obramowaniem.
+Dodaj efekt: przy najechaniu karta lekko się powiększa (transform: scale) z płynnym przejściem (transition).
+
+zad. 10
+Formularz kontaktowy
+Utwórz formularz z etykietami (label) i polami (input, textarea).
+Każdy element formularza ma być w osobnej linii (display: block).
+Dodaj odstępy (margin-bottom) między polami.
+Ustaw czytelną czcionkę (font-size, line-height).
+Dodaj przycisk wysyłki (button) z cursor: pointer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

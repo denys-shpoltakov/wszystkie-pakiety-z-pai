@@ -1,0 +1,25 @@
+Zadanie 1 – Baner zgody na cookies
+
+Stwórz prosty baner (lub modala) informujący użytkownika 
+o tym, że strona korzysta z plików cookies.
+Baner ma się pojawiać do momentu, aż użytkownik kliknie przycisk „Akceptuję”.
+Po kliknięciu zapisz w przeglądarce cookie, które zapamięta zgodę na 7 dni.
+Jeśli cookie istnieje – baner nie pojawia się ponownie.
+
+Co ma się znaleźć na stronie:
+
+* tekst informacyjny, np. „Używamy plików cookies, żeby poprawić działanie strony.”
+* przycisk „Akceptuję cookies”
+
+Inspiracja wizualna
+Nie kopiuj gotowego kodu – zrób własny projekt na podstawie jednego z poniższych 
+przykładów:
+https://codepen.io/cristinaconacel/pen/oQyVyQ
+https://codepen.io/JapperCat/pen/xxeKNPE
+
+
+Zadanie 2
+
+Stwórz przełącznik, który zmienia wygląd strony – z jasnego trybu na ciemny i odwrotnie.
+Ustawienia mają się zapisywać w localStorage, żeby po odświeżeniu strony motyw się 
+nie resetował.
