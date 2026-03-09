@@ -1,169 +1,127 @@
-/* 
-CSS (Cascading Style Sheets) to język, który odpowiada za wygląd strony internetowej.
-HTML daje strukturę, a CSS decyduje o tym, jak to wszystko się prezentuje – kolory, 
-czcionki, odstępy, układ na stronie, animacje (za to wwszystko odpowiadją style css). 
+/* CSS (Cascading Style Sheets) — это язык, который отвечает за внешний вид веб-сайта.
+HTML создает структуру (каркас), а CSS определяет, как всё это выглядит: 
+цвета, шрифты, отступы, макет страницы и анимации.
 
- W przypadku HTML i CSS, bardzo często porównuje się te technologie do budowy domu.
-HTML to ściany, dach, okna, fundamenty - ogólnie mówiąc konstrukcja.
-CSS pełni rolę wykończeniową czyli nakłada farby na tynki, dekoruje cały dom.
+В мире веб-разработки HTML и CSS часто сравнивают со строительством дома:
+- HTML — это стены, крыша, окна и фундамент (конструкция).
+- CSS — это отделка: покраска стен, декор и интерьер.
 
-Bez CSS wszystkie strony wyglądałyby jak czarno-biały dokument tekstowy.
-Dzięki CSS mamy kolorowe przyciski, wyrównane układy, responsywne menu i animacje. 
-
+Без CSS все сайты выглядели бы как черно-белые текстовые документы. 
+Благодаря CSS у нас есть красивые кнопки, выровненные блоки, адаптивные меню и анимации.
 
 -----------------------------------------------------------------------
 
-Kombinatory
+Комбинаторы
 
-Kombinatory to specjalne „łączniki” między selektorami. Dzięki nim możemy bardzo dokładnie wskazać, 
-który element na stronie ma dostać styl.
+Комбинаторы — это специальные «соединители» между селекторами. 
+Они позволяют максимально точно указать, к какому элементу применить стиль.
 
 ------------------------------
 
-Potomek (spacja A B)
-Mówi: „Znajdź wszystkie elementy B, które są gdzieś wewnątrz A (na dowolnym poziomie).”
+Потомок (пробел: A B)
+Находит ВСЕ элементы B, которые находятся внутри A (на любом уровне вложенности).
 
-Przykład:
+Пример:
 div p { color: red; } 
-
-Wszystkie <p> wewnątrz <div> zmienią kolor na czerwony. Nieważne, czy są bezpośrednio w div, czy głębiej.
+Все <p> внутри <div> станут красными, даже если они обернуты в другие теги.
 
 ------------------------------
 
-Dziecko (A > B)
-Mówi: „Znajdź elementy B, które są bezpośrednimi dziećmi A.”
-Przykład:
+Дочерний элемент (A > B)
+Находит элементы B, которые являются прямыми наследниками (детьми) A.
+
+Пример:
 div > p { color: blue; }
+Только те <p>, которые находятся непосредственно в <div>. "Внуки" и "правнуки" не изменятся.
 
-Tylko <p>, które są od razu w <div>. Wnuki i prawnuki już się nie liczą.
+
 
 ------------------------------
 
-Sąsiadujący brat (A + B)
-Mówi: „Znajdź element B, który stoi tuż po A (ma tego samego rodzica).”
-Przykład: 
+Соседний брат (A + B)
+Находит элемент B, который идет СРАЗУ после A (у них должен быть один родитель).
+
+Пример: 
 h1 + p { font-weight: bold; }
-
-Tylko pierwszy <p> po <h1> będzie pogrubiony.
+Только первый абзац <p>, следующий сразу за заголовком <h1>, станет жирным.
 
 ------------------------------
 
-Ogólny brat (A ~ B)
-Mówi: „Znajdź wszystkie elementy B, które są rodzeństwem A, ale stoją gdzieś dalej po nim.”
-Przykład: 
-h1 ~ p { color: green; }
+Общий брат (A ~ B)
+Находит все элементы B, которые являются «братьями» A (идут после него в том же контейнере).
 
-Wszystkie <p> w tym samym kontenerze, które występują po <h1>.
+Пример: 
+h1 ~ p { color: green; }
+Все <p> внутри того же родителя, которые стоят после <h1>.
 
 ------------------------------------------------------------------------------
 
-Selektory
-Selektor to część reguły CSS, która mówi „do jakiego elementu na stronie zastosować styl”.
-Można powiedzieć, że selektor to adres, a deklaracje CSS to wygląd pod tym adresem.
+Селекторы
+Селектор — это часть правила CSS, которая указывает: «к какому элементу применить стиль».
+Селектор — это адрес, а CSS-декларация — это описание внешнего вида по этому адресу.
 
-Selektory można podzielić na trzy grupy - proste, złożone (łączone), specjalne.
-Proste: 
-* (wszystkie elementy)
-tagu np. h1 {}; p {}; div {};
-klasy .nazwa-klasy {}
-id #nazwa-id
-atrybutu [type="text"]
+Типы селекторов:
+1. Простые:
+   * (все элементы)
+   тег (напр. h1, p, div)
+   класс (.название-класса)
+   ID (#название-id)
+   атрибут ([type="text"])
 
-Złożone: 
+2. Составные (сложные):
+   p.note { color: red; } — только абзацы с классом "note".
+   input[type="email"] { border: 1px solid; }
 
-p.note { color: red; } -  akapity z klasą "note" 
-input[type="email"] { border: 1px solid; }
+3. Специальные:
+   Псевдоклассы — :hover, :first-child, :nth-child(odd).
+   Псевдоэлементы — ::before, ::after, ::first-letter.
 
-Specjalne: 
-
-pseudoklasy – :hover, :first-child, :nth-child(odd),
-pseudoelementy – ::before, ::after, ::first-letter.
-
-
-Kombinator to znak (spacja, >, +, ~), który określa relację między dwoma selektorami.
-Czyli kombiantor nie działa samodzielnie – łączy selektory i pozwala bardziej precyzyjnie wskazać elementy.
-
-Przykłady:
-
-div p → wszystkie p będące potomkami div,
-
-div > p → p będące bezpośrednim dzieckiem div,
-
-h1 + p → pierwszy p zaraz po h1,
-
-h1 ~ p → wszystkie p będące rodzeństwem h1 i stojące po nim.
-
-Różnica – selektor vs. kombinator
-
-Selektor: wskazuje konkretny element lub grupę elementów 
-(np. wszystkie <p>, wszystkie .btn, pierwszy dziecko listy).
-
-Kombinator: mówi jak te elementy są ze sobą powiązane w drzewie HTML 
-(rodzic–dziecko, rodzeństwo itd.).
-
-Selektor = kogo wybierasz.
-Kombinator = w jakiej relacji ten ktoś jest do innych elementów.
-
+Важное различие:
+Селектор = КОГО мы выбираем.
+Комбинатор = в каких ОТНОШЕНИЯХ этот кто-то находится с другими элементами.
 
 ---------------------------------------------------------
 
-https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/
+Псевдоклассы
 
-Pseudoklasy
+Псевдокласс — это ключевое слово (после :), которое описывает СОСТОЯНИЕ элемента 
+или его позицию в структуре.
 
-Pseudoklasa to słowo kluczowe dodawane do selektora (po :), które opisuje stan elementu 
-albo jego pozycję w strukturze. Dzięki pseudoklasom możemy stylować elementy 
-dynamicznie (np. po najechaniu myszką, w trakcie klikania, gdy są puste, wybrane, 
-niepoprawne itd.).
+:hover — состояние при наведении курсора мыши.
+:active — состояние в момент клика.
+:focus — элемент, получивший фокус (например, поле ввода).
+:first-child / :last-child — первый / последний ребенок своего родителя.
+:nth-child(n) — элемент с конкретным порядковым номером.
+:nth-of-type(n) — элемент своего типа с конкретным номером.
+:not(selector) — выбирает всё, что НЕ подходит под условие.
+:focus-visible — фокус, который виден (например, при навигации с клавиатуры).
+:checked — для выбранных полей (checkbox, radio).
+:disabled, :enabled — стилизация заблокированных или активных полей.
 
-
-:hover – element, gdy najedziemy myszką.
-:active – element podczas klikania.
-:focus – element, który ma fokus (np. input po kliknięciu).
-:first-child / :last-child – pierwszy / ostatni element w rodzicu.
-:nth-child(n) – konkretny element wg kolejności.
-:nth-of-type(n) – element wg kolejności danego typu.
-:not(selector) – wybiera wszystko, co nie pasuje.
-:focus-visible - działa podobnie do :focus, ale tylko wtedy, gdy fokus jest widoczny 
-(np. przy tabulatorze, a nie przy kliknięciu myszą).
-:checked - działa na pola formularzy (checkbox, radio).
-:disabled, :enabled - stylowanie pól formularzy zależnie od stanu.
-:has() - nowość od 2024 roku, pozwala stylować element na podstawie tego, co zawiera:
-Przykład: 
-Ostyluj <article>, jeśli w środku ma obrazek 
-
-article:has(img) {
-  border: 2px solid green;
-}
-
-Ostyluj <label>, jeśli ma zaznaczonego checkboxa 
-
-label:has(input:checked) {
-  background: yellow;
-}
-
+:has() — мощная новинка (с 2024 г.). Позволяет стилизовать родителя на основе его содержимого.
+Пример: Стилизовать <article>, если внутри есть картинка:
+article:has(img) { border: 2px solid green; }
 
 -------------------------------------------------------
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+Псевдоэлементы 
 
-Pseudoelementy 
+Псевдоэлемент (с двойным двоеточием ::) позволяет стилизовать ЧАСТЬ элемента 
+или добавить виртуальный контент.
 
-Pseudoelement to słowo kluczowe z podwójnym dwukropkiem ::, 
-które pozwala wystylizować część elementu albo dodać wirtualny element.
+::before — добавляет контент ПЕРЕД содержимым элемента.
+Пример: li::before { content: "• "; color: red; }
 
-::before - dodaje treść przed elementem.
-Przykład: 
-li::before { content: "• "; color: red; }
+::after — добавляет контент ПОСЛЕ содержимого элемента.
+Пример: button::after { content: " ✅"; }
 
-::after - dodaje treść po elemencie.
-Przykład: 
-button::after { content: " ✅"; }
+::first-letter — стилизует первую букву текста.
+Пример: p::first-letter { font-size: 2em; color: blue; }
 
-::first-letter - stylizuje pierwszą literę tekstu.
-Przykład: 
-p::first-letter { font-size: 2em; color: blue; }
+::selection — стилизует текст, который пользователь выделил мышкой.
 
+-------------------------------------------------------
 
-
+Полезные ссылки:
+https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Selectors
 */

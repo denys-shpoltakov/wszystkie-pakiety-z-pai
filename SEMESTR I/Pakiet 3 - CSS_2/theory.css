@@ -1,9 +1,8 @@
-/* Zmienne w CSS: 
+/* Переменные в CSS:
 
-Definiowanie zmiennych
-
-Zmienne CSS definiujemy wewnątrz selektora z --nazwa.
-Najczęściej umieszcza się je w :root, żeby były globalne.
+Определение переменных
+Переменные CSS определяются внутри селектора с использованием префикса --название.
+Чаще всего их помещают в :root, чтобы они были глобальными.
 
 :root {
   --primary-color: #3498db;
@@ -14,178 +13,153 @@ Najczęściej umieszcza się je w :root, żeby były globalne.
 
 ---------------------------------------------------------------------
 
-Używanie zmiennych
+Использование переменных
+Для обращения к переменной используем var(--название)
 
-Do odwoływania się używamy var(--nazwa)
-
-Przykład użycia: 
+Пример использования:
 
 body {
   background-color: var(--primary-color);
   color: var(--text-color);
   padding: var(--base-padding);
-} 
-  
+}
 
 ---------------------------------------------------------------------
 
+Основные наиболее часто используемые свойства CSS:
 
-Podstawowe najczęściej wykorzystywane właściwości css: 
+Текст и шрифты
+color – устанавливает цвет текста.
+font-size – определяет размер шрифта.
+font-family – выбор шрифта (например, Arial, sans-serif).
+font-weight – толщина текста (например, normal, bold, 100–900).
+text-align – выравнивание текста (left, right, center, justify).
+text-decoration – декорация текста (underline, line-through, none).
+line-height – межстрочный интервал.
+letter-spacing – межбуквенный интервал.
 
-Tekst i czcionki
+Макет элементов (Layout)
+display – способ отображения (block, inline, flex, grid, none).
+position – позиционирование (static, relative, absolute, fixed, sticky).
+top, right, bottom, left – смещение элемента при позиционировании.
+float – «обтекание» элемента другими (сейчас используется реже).
+clear – контроль обтекания (например, clear: both).
+z-index – порядок наложения элементов по оси Z.
 
-color – ustawia kolor tekstu.
-font-size – określa wielkość czcionki.
-font-family – wybór czcionki (np. Arial, sans-serif).
-font-weight – grubość tekstu (np. normal, bold, 100–900).
-text-align – wyrównanie tekstu (left, right, center, justify).
-text-decoration – dekoracje tekstu (underline, line-through, none).
-line-height – odstęp między liniami tekstu.
-letter-spacing – odstęp między literami.
+Размеры и отступы
+width / height – ширина и высота элемента.
+max-width / min-width – ограничения размеров.
+margin – внешний отступ элемента.
+padding – внутренний отступ элемента.
+border – рамка (толщина, стиль, цвет).
+box-sizing – определяет, включают ли размеры padding и border (content-box / border-box).
 
+Фон и цвета
+background-color – цвет фона.
+background-image – изображение в качестве фона.
+background-size – размер фона (cover, contain, значения в px/%).
+background-position – позиция фона (center, top, 50% 50%).
+opacity – прозрачность (0–1).
 
-Układ elementów
+Эффекты и анимации
+transition – анимация при изменении свойств (время, эффект).
+transform – преобразования (scale, rotate, translate).
+animation – определяет анимацию с помощью @keyframes.
+box-shadow – тень для элементов.
+text-shadow – тень для текста.
+cursor – вид курсора (pointer, default, move).
 
-display – sposób wyświetlania (block, inline, flex, grid, none).
-position – pozycjonowanie (static, relative, absolute, fixed, sticky).
-top, right, bottom, left – przesunięcie elementu przy pozycjonowaniu.
-float – „opływanie” elementu przez inne (obecnie rzadziej używane).
-clear – kontrola opływania (np. clear: both).
-z-index – kolejność nakładania się elementów. 
+Flexbox и Grid
+display: flex / grid – современные системы верстки макета.
+justify-content – выравнивание по главной оси (flex/grid).
+align-items – выравнивание по поперечной оси (flex/grid).
+gap – расстояние между элементами в flex/grid.
+grid-template-columns / rows – определение колонок и строк в сетке.
 
-
-Rozmiary i odstępy
-
-width / height – szerokość i wysokość elementu.
-max-width / min-width – ograniczenia wymiarów.
-margin – odstęp na zewnątrz elementu.
-padding – odstęp wewnątrz elementu.
-border – obramowanie (grubość, styl, kolor).
-box-sizing – określa, czy wymiary obejmują padding i border (content-box / border-box).
-
-
-Tło i kolory
-
-background-color – kolor tła.
-background-image – obraz jako tło.
-background-size – rozmiar tła (cover, contain, wartości px/%).
-background-position – pozycja tła (center, top, 50% 50%).
-opacity – przezroczystość (0–1).
-
-
-Efekty i animacje
-
-transition – animacje przy zmianie właściwości (czas, efekt).
-transform – przekształcenia (scale, rotate, translate).
-animation – definiuje animację z @keyframes.
-box-shadow – cień dla elementów.
-text-shadow – cień dla tekstu.
-cursor – wygląd kursora (pointer, default, move).
-
-
-Flexbox i Grid
-
-display: flex / grid – nowoczesne systemy układu.
-justify-content – wyrównanie w osi głównej (flex/grid).
-align-items – wyrównanie w osi poprzecznej (flex/grid).
-gap – odstęp między elementami w flex/grid.
-grid-template-columns / rows – definicja kolumn i wierszy.
-
-
-Przydatne źródła:
-
-MDN CSS - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+Полезные ресурсы:
+MDN CSS - https://developer.mozilla.org/ru/docs/Web/CSS
 W3Schools - https://www.w3schools.com/cssref/
 CSS Tricks - https://css-tricks.com/almanac/
 CodePen - https://codepen.io/
 
-
 ---------------------------------------------------------------------
 
-Ściaga CSS: 
+Шпаргалка CSS:
 
-| Właściwość                       | Opis                                                       |
-| -------------------------------- | ---------------------------------------------------------- |
-|   color                          | Kolor tekstu                                               |
-|   font-size                      | Rozmiar czcionki                                           |
-|   font-family                    | Wybór czcionki                                             |
-|   font-weight                    | Grubość czcionki                                           |
-|   text-align                     | Wyrównanie tekstu (left, right, center, justify)           |
-|   text-decoration                | Dekoracje (underline, none, line-through)                  |
-|   line-height                    | Odstęp między liniami                                      |
-|   letter-spacing                 | Odstęp między literami                                     |
-|   display                        | Sposób wyświetlania (block, inline, flex, grid, none)      |
-|   position                       | Pozycjonowanie (static, relative, absolute, fixed, sticky) |
-|   top / right / bottom / left    | Przesunięcia przy pozycjonowaniu                           |
-|   z-index                        | Kolejność nakładania elementów                             |
-|   float                          | Opływanie elementu (left, right)                           |
-|   clear                          | Zatrzymanie opływania (left, right, both)                  |
-|   width / height                 | Szerokość i wysokość                                       |
-|   max-width / min-width          | Ograniczenia rozmiarów                                     |
-|   margin                         | Odstęp na zewnątrz elementu                                |
-|   padding                        | Odstęp wewnątrz elementu                                   |
-|   border                         | Obramowanie elementu                                       |
-|   border-radius                  | Zaokrąglenie rogów (50% = kółko)                           |
-|   box-sizing                     | Sposób liczenia wymiarów (content-box, border-box)         |
-|   background-color               | Kolor tła                                                  |
-|   background-image               | Obraz jako tło                                             |
-|   background-size                | Rozmiar tła (cover, contain)                               |
-|   background-position            | Pozycja tła (center, top, 50% 50%)                         |
-|   opacity                        | Przezroczystość (0–1)                                      |
-|   transition                     | Płynne przejścia                                           |
-|   transform                      | Przekształcenia (rotate, scale, translate)                 |
-|   animation                      | Animacje z @keyframes                                      |
-|   box-shadow                     | Cień elementu                                              |
-|   text-shadow                    | Cień tekstu                                                |
-|   cursor                         | Wygląd kursora (pointer, text, move)                       |
-|   justify-content                | Wyrównanie w osi głównej (flex/grid)                       |
-|   align-items                    | Wyrównanie w osi poprzecznej (flex/grid)                   |
-|   gap                            | Odstęp między elementami w flex/grid                       |
-|   grid-template-columns / rows   | Definicja kolumn i wierszy w grid                          |
+| Свойство                        | Описание                                                   |
+| ------------------------------- | ---------------------------------------------------------- |
+| color                           | Цвет текста                                                |
+| font-size                       | Размер шрифта                                              |
+| font-family                     | Выбор шрифта                                               |
+| font-weight                     | Толщина шрифта                                             |
+| text-align                      | Выравнивание (left, right, center, justify)                |
+| text-decoration                 | Декор (underline, none, line-through)                      |
+| line-height                     | Межстрочный интервал                                       |
+| letter-spacing                  | Межбуквенный интервал                                      |
+| display                         | Способ отображения (block, inline, flex, grid, none)       |
+| position                        | Позиционирование (static, relative, absolute, fixed, sticky)|
+| top / right / bottom / left     | Смещения при позиционировании                              |
+| z-index                         | Порядок наложения слоев                                    |
+| float                           | Обтекание элемента (left, right)                           |
+| clear                           | Остановка обтекания (left, right, both)                    |
+| width / height                  | Ширина и высота                                            |
+| max-width / min-width           | Ограничения размеров                                       |
+| margin                          | Внешний отступ                                             |
+| padding                         | Внутренний отступ                                          |
+| border                          | Рамка элемента                                             |
+| border-radius                   | Закругление углов (50% = круг)                             |
+| box-sizing                      | Расчет размеров (content-box, border-box)                  |
+| background-color                | Цвет фона                                                  |
+| background-image                | Фоновое изображение                                        |
+| background-size                 | Размер фона (cover, contain)                               |
+| background-position             | Позиция фона (center, top)                                 |
+| opacity                         | Прозрачность (0–1)                                         |
+| transition                      | Плавные переходы                                           |
+| transform                       | Трансформации (rotate, scale, translate)                   |
+| animation                       | Анимации через @keyframes                                  |
+| box-shadow                      | Тень элемента                                              |
+| text-shadow                     | Тень текста                                                |
+| cursor                          | Вид курсора (pointer, text, move)                          |
+| justify-content                 | Выравнивание по главной оси (flex/grid)                    |
+| align-items                     | Выравнивание по поперечной оси (flex/grid)                 |
+| gap                             | Отступ между элементами (flex/grid)                        |
+| grid-template-columns / rows    | Сетка колонок и строк в grid                               |
 
+Основные единицы измерения CSS:
 
+| Единица | Описание                                                     | Применение                       |
+| ------- | ------------------------------------------------------------ | -------------------------------- |
+| px      | Пиксели, самая частая единица                                | Размеры, отступы, шрифты         |
+| em      | Относительно шрифта родительского элемента                   | Масштабирование текста           |
+| rem     | Относительно шрифта корневого элемента (`html`)              | Текст и отступы                  |
+| %       | Процент относительно родителя                                | Ширина, высота                   |
+| vw      | Процент ширины окна браузера                                 | Адаптивные макеты                |
+| vh      | Процент высоты окна браузера                                 | Полноэкранные секции             |
+| dvh     | Dynamic viewport height – реальная высота мобильного экрана  | Мобильный Fullscreen             |
+| s       | Секунды                                                      | Время анимаций                   |
+| ms      | Миллисекунды                                                 | Точные анимации                  |
+| deg     | Градусы (0–360)                                              | Поворот (rotate)                 |
 
-Najczęściej stosowane jednostki CSS: 
+Другие единицы (используются реже):
 
-
-| Jednostka | Opis                                                          | Typowe zastosowanie               |
-| --------- | ------------------------------------------------------------- | --------------------------------- |
-|   px      | Piksele, najczęściej używana jednostka                        | Wymiary, marginesy, czcionki      |
-|   em      | Względem rozmiaru czcionki elementu nadrzędnego               | Skalowanie tekstu, odstępy        |
-|   rem     | Względem rozmiaru czcionki elementu głównego (`html`)         | Stałe rozmiary tekstu, odstępy    |
-|   %       | Procent w stosunku do elementu nadrzędnego                    | Szerokość, wysokość, marginesy    |
-|   vw      | Procent szerokości okna przeglądarki                          | Layouty responsywne               |
-|   vh      | Procent wysokości okna przeglądarki                           | Sekcje pełnoekranowe              |
-|   dvh     | Dynamic viewport height – faktyczna wysokość ekranu mobilnego | Mobilne layouty fullscreen        |
-|   s       | Sekundy                                                       | Czas animacji, przejść            |
-|   ms      | Milisekundy                                                   | Dokładniejsze animacje, przejścia |
-|   deg     | Stopnie (0–360)                                               | Obrót w transformacjach           |
-
-
-Pozostałe jednostki, o których warto wiedzieć, że istnieją (rzadziej używane podczas tworzenia serwisów webowych): 
-
-
-| Jednostka     | Opis                                                             |
+| Единица       | Описание                                                         |
 | ------------- | ---------------------------------------------------------------- |
-|   cm          | Centymetry (druk)                                                |
-|   mm          | Milimetry (druk)                                                 |
-|   in          | Cale (druk)                                                      |
-|   pt          | Punkty typograficzne (1/72 cala)                                 |
-|   pc          | Pica (12 punktów typograficznych)                                |
-|   vmin        | Procent mniejszego wymiaru ekranu                                |
-|   vmax        | Procent większego wymiaru ekranu                                 |
-|   dvw         | Dynamic viewport width                                           |
-|   lvh / lvw   | Large viewport height/width (największy możliwy rozmiar ekranu)  |
-|   svh / svw   | Small viewport height/width (najmniejszy możliwy rozmiar ekranu) |
-|   rad         | Radiany (kąty)                                                   |
-|   turn        | Pełne obroty (1turn = 360°)                                      |
-|   dpi         | Kropki na cal (druk, media queries)                              |
-|   dpcm        | Kropki na centymetr                                              |
-|   dppx        | Punkty na piksel urządzenia (1dppx = 96dpi)                      |
+| cm            | Сантиметры (для печати)                                          |
+| mm            | Миллиметры (для печати)                                          |
+| in            | Дюймы (для печати)                                               |
+| pt            | Типографские пункты (1/72 дюйма)                                 |
+| pc            | Пика (12 пунктов)                                                |
+| vmin          | Процент меньшего измерения экрана                                |
+| vmax          | Процент большего измерения экрана                                |
+| dvw           | Dynamic viewport width                                           |
+| lvh / lvw     | Large viewport height/width (макс. размер экрана)                |
+| svh / svw     | Small viewport height/width (мин. размер экрана)                 |
+| rad           | Радианы (углы)                                                   |
+| turn          | Полные обороты (1turn = 360°)                                    |
+| dpi           | Точек на дюйм (печать, media queries)                            |
+| dpcm          | Точек на сантиметр                                               |
+| dppx          | Точек на пиксель устройства (1dppx = 96dpi)                      |
 
-
-
-Przydatne źrodła:
+Полезные ресурсы:
 https://htmlcheatsheet.com/css/
-
 */

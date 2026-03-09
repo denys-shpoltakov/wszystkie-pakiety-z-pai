@@ -1,100 +1,39 @@
-/* Zad 1.
-Nadaj wszystkim nagłówkom <h2> kolor niebieski, a wszystkim paragrafom <p> kolor szary.
-*/
-h2 {
-  color: blue;
-}
+/* Задание 1.
+Задайте всем заголовкам <h2> синий цвет, а всем абзацам <p> — серый.
 
-p {
-  color: grey;
-}
+Задание 2. 
+Создайте класс .highlight и установите для него желтый фон. 
+Примените этот класс к одному выбранному абзацу.
 
-/*Zad 2. 
-Stwórz klasę .highlight i ustaw w niej żółte tło.
-Zastosuj ją do jednego wybranego paragrafu.
-*/
+Задание 3. 
+Элементу с id="main" задайте ширину 400px и рамку 2px solid black.
 
-.highlight {
-  background-color: yellow;
-}
+Задание 4.
+Установите красный цвет всем элементам <span>, которые находятся внутри абзацев <p>.
 
-/*Zad 3. 
-Nadaj elementowi z id="main" szerokość 400px i obramowanie 2px solid black.
-*/
+Задание 5. 
+Задайте зеленый цвет всем ссылкам <a>, которые являются прямыми потомками (детьми) элементов списка <li>.
 
-#main {
-  width: 400px;
-  border: 2px solid black;
-}
+Задание 6. 
+Для первого абзаца, идущего сразу после заголовка <h1>, установите курсив. 
+Всем последующим абзацам после <h1> задайте синий цвет.
 
-/*Zad 4.
-Ustaw kolor czerwony wszystkim <span>, które znajdują się wewnątrz paragrafów <p>.
-*/
+Задание 7. 
+Измените цвет ссылки на красный при наведении курсора (:hover). 
+Измените цвет ссылки на зеленый в момент клика (:active).
 
-p span {
-  color: red;
-}
+Задание 8. 
+Установите жирное начертание для первого элемента списка (:first-child). 
+Задайте серый цвет всем четным элементам списка (:nth-child(even)).
 
-/*Zad 5. 
-Nadaj zielony kolor wszystkim linkom <a>, które są bezpośrednimi dziećmi listy <li>.
-*/
+Задание 9. 
+Добавьте символ «✔» в конце каждой ссылки (a::after). 
+Сделайте жирной первую букву каждого абзаца (p::first-letter).
 
-li > a {
-  color: green;
-}
-
-/*Zad 6. 
-Pierwszemu paragrafowi po nagłówku <h1> ustaw kursywę.
-Wszystkim kolejnym paragrafom po <h1> nadaj kolor niebieski.
-*/
-
-h1 + p {
-  color: blue;
-}
-
-/*Zad 7. 
-Zmień kolor linku na czerwony po najechaniu myszką (:hover).
-Zmień kolor linku na zielony w momencie kliknięcia (:active).
-*/
-
-:hover {
-  color: red;
-}
-
-:active {
-  color: green;
-}
-
-/*Zad 8. 
-Ustaw pogrubienie na pierwszym elemencie listy (:first-child).
-Nadaj kolor szary wszystkim parzystym elementom listy (:nth-child(even)).
-*/
-
-li:first-child {
-  font-weight: bold;
-}
-
-li:nth-child(even) {
-  color: grey;
-}
-
-/*Zad 9. 
-Dodaj „✔” na końcu każdego linku (a::after).
-Pogrub pierwszą literę każdego akapitu (p::first-letter).
-*/
-
-a::after {
-  content: "✔";
-}
-
-p::first-letter {
-  font-weight: bold;
-}
-
-/*Zad 10.
-Stwórz prostą nawigację: lista <ul> z trzema linkami.
-Użyj klas (.nav__item) do stylowania marginesów,
-Pseudoklasy (:hover) do zmiany koloru linków,
-Kombinatorów (ul > li) do nadania koloru tylko elementom bezpośrednio w liście,
-Pseudoelementów (::before) do dodania „→ ” przed każdym linkiem.
+Задание 10.
+Создайте простую навигацию: список <ul> с тремя ссылками. 
+Используйте классы (.nav__item) для настройки отступов, 
+псевдоклассы (:hover) для изменения цвета ссылок, 
+комбинаторы (ul > li) для задания цвета только прямым элементам списка, 
+псевдоэлементы (::before) для добавления «→ » перед каждой ссылкой. 
 */
