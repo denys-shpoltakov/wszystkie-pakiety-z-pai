@@ -1,38 +1,100 @@
 /* Zad 1.
 Nadaj wszystkim nagłówkom <h2> kolor niebieski, a wszystkim paragrafom <p> kolor szary.
+*/
+h2 {
+  color: blue;
+}
 
-Zad 2. 
+p {
+  color: grey;
+}
+
+/*Zad 2. 
 Stwórz klasę .highlight i ustaw w niej żółte tło.
 Zastosuj ją do jednego wybranego paragrafu.
+*/
 
-Zad 3. 
+.highlight {
+  background-color: yellow;
+}
+
+/*Zad 3. 
 Nadaj elementowi z id="main" szerokość 400px i obramowanie 2px solid black.
+*/
 
-Zad 4.
+#main {
+  width: 400px;
+  border: 2px solid black;
+}
+
+/*Zad 4.
 Ustaw kolor czerwony wszystkim <span>, które znajdują się wewnątrz paragrafów <p>.
+*/
 
-Zad 5. 
+p span {
+  color: red;
+}
+
+/*Zad 5. 
 Nadaj zielony kolor wszystkim linkom <a>, które są bezpośrednimi dziećmi listy <li>.
+*/
 
-Zad 6. 
+li > a {
+  color: green;
+}
+
+/*Zad 6. 
 Pierwszemu paragrafowi po nagłówku <h1> ustaw kursywę.
 Wszystkim kolejnym paragrafom po <h1> nadaj kolor niebieski.
+*/
 
-Zad 7. 
+h1 + p {
+  color: blue;
+}
+
+/*Zad 7. 
 Zmień kolor linku na czerwony po najechaniu myszką (:hover).
 Zmień kolor linku na zielony w momencie kliknięcia (:active).
+*/
 
-Zad 8. 
+:hover {
+  color: red;
+}
+
+:active {
+  color: green;
+}
+
+/*Zad 8. 
 Ustaw pogrubienie na pierwszym elemencie listy (:first-child).
 Nadaj kolor szary wszystkim parzystym elementom listy (:nth-child(even)).
+*/
 
-Zad 9. 
+li:first-child {
+  font-weight: bold;
+}
+
+li:nth-child(even) {
+  color: grey;
+}
+
+/*Zad 9. 
 Dodaj „✔” na końcu każdego linku (a::after).
 Pogrub pierwszą literę każdego akapitu (p::first-letter).
+*/
 
-Zad 10.
+a::after {
+  content: "✔";
+}
+
+p::first-letter {
+  font-weight: bold;
+}
+
+/*Zad 10.
 Stwórz prostą nawigację: lista <ul> z trzema linkami.
 Użyj klas (.nav__item) do stylowania marginesów,
 Pseudoklasy (:hover) do zmiany koloru linków,
 Kombinatorów (ul > li) do nadania koloru tylko elementom bezpośrednio w liście,
-Pseudoelementów (::before) do dodania „→ ” przed każdym linkiem. */
+Pseudoelementów (::before) do dodania „→ ” przed każdym linkiem.
+*/

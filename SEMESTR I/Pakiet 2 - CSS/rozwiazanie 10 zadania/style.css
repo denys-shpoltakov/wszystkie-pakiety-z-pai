@@ -1,0 +1,15 @@
+li a:hover {
+  color: red;
+}
+
+.nav__item {
+  margin: 20px;
+}
+
+ul > li {
+  color: blue;
+}
+
+ul li a::before {
+  content: "→";
+}
