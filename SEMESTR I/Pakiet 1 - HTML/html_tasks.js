@@ -1,34 +1,33 @@
-Zad. 1 - serwis internetowy. 
+/* Задание 1 — Веб-сервис.
 
-Stwórz 4 pliki html:
-index.html 
-kontakt.html 
-o_nas.html
-uslugi.html
+Создайте 4 HTML-файла:
+- index.html
+- kontakt.html
+- o_nas.html
+- uslugi.html
 
-Każda ze stron powinna posiadać nawigację  z linkami, header oraz stopkę,
-a także główną treść posiadającą minimum 4 sekcje z nagłówkami odpowiedniego typu.
-Sekcja header również powinna posiadać odpowiedni nagłówek, a także
-tzw. placeholder użyty w odpowiednim tagu. Placeholder możesz wykorzystać
-np. z https://placehold.co/
+Требования:
+1. Каждая страница должна иметь навигацию со ссылками, шапку (header) и подвал (footer).
+2. Основной контент (main) должен содержать минимум 4 секции с заголовками соответствующих типов.
+3. Секция header должна иметь подходящий заголовок и изображение-заглушку (placeholder), 
+   вставленное через правильный тег. Заглушку можно взять, например, с https://placehold.co/
+4. Ссылки на страницы должны открываться в новых вкладках, а каждая вкладка должна иметь 
+   заголовок (title), соответствующий её назначению.
+5. Для выполнения задания используйте сокращения Emmet.
+6. Создайте файл kwerendy.txt и запишите в нем все использованные вами сокращения Emmet.
 
-Linki do stron powinny się otwierać w osobnych zakładkach, a każda z zakładek
-powinna mieć nadany tytuł zgodny z jej przeznaczeniem. 
+------------------------------------------------------------------------------------------
 
-Do wykonania zadania użyj skrótów Emmet. 
-Utwórz plik kwerendy.txt i napisz w nim, które skróty emmet zostały przez Ciebie użyte.
+Задание 2 — Landing Page на HTML.
 
+Создайте страницу index.html со структурой, соответствующей семантике HTML и правилам WCAG.
 
-
-zad.2 - landing page w html
-
-Stwórz stronę w index.html z odpowiednią strukturą zgodną z semantyką 
-HTML i WCAG. Strona powinna posiadać minimum 5 sekcji z nagłówkiem h2 
-i jej podpisem. Np. w sekcji 2 pownien znaleźć się nagłówek h2 z treścią
-"Witaj w sekcji nr 2". Pod nagłówkiem umieść paragraf, w którym będzie minimum
-400 znaków. Do wygenerowania 400znaków użyj odpowiedniego skrótu w Emmet związanego
-z Lorem. 
-W nawigacji umieść linki wewnętrzne do każdej z sekcji. Skorzystaj z tzw. kotwic.
-Stwórz plik kwerendy.txt i zapisz w nim jakie komendy z Emmet były pomocne do wykonania zadania.
-
-
+Требования:
+1. Страница должна содержать минимум 5 секций с заголовком h2 и описанием. 
+   Например, во 2-й секции должен быть заголовок h2 с текстом "Добро пожаловать в секцию №2".
+2. Под заголовком разместите абзац, содержащий минимум 400 символов. 
+   Для генерации текста используйте сокращение Emmet, связанное с Lorem.
+3. В навигации разместите внутренние ссылки на каждую из секций, используя "якоря" (id).
+4. Создайте файл kwerendy.txt и запишите в нем, какие команды Emmet помогли вам 
+   выполнить это задание.
+*/

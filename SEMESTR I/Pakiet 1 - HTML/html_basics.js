@@ -1,135 +1,134 @@
-// Żródła oficjalne oraz nieco mniej, z których można czerpać wiedzę m.in. o html i css:
+// Официальные и дополнительные источники для изучения HTML и CSS:
 
-// https://developer.mozilla.org/en-US/docs/Web/HTML
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+// https://developer.mozilla.org/ru/docs/Web/HTML
+// https://developer.mozilla.org/ru/docs/Web/HTML/Element
 // https://html.spec.whatwg.org/
 
-// Żródła z nastawieniem na praktykę / testowanie zapoznanej teorii:
+// Практические ресурсы для тестирования теории:
 
 // https://www.freecodecamp.org/news/tag/html/
 // https://www.w3schools.com/html/
 // https://www.geeksforgeeks.org/html/html-tutorial/
 
-// // // // // // Tagi html służące do budowania struktury strony: //
+// // // // // // Теги HTML для построения структуры страницы: //
 
-// // // // // <html></html> – główny element dokumentu HTML, zawiera całą stronę.
+// // // // // <html></html> – корневой элемент HTML-документа, содержит всю страницу.
 
-// // // // // <head></head> – sekcja nagłówkowa, zawiera metadane (np. tytuł strony, style, skrypty).
+// // // // // <head></head> – техническая секция, содержит метаданные (заголовок страницы, стили, скрипты).
 
-// // // // // <body></body> – właściwa treść strony widoczna dla użytkownika.
+// // // // // <body></body> – основное содержимое страницы, видимое пользователю.
 
-// // // // // <header></header> – to sekcja dokumentu zawierająca metadane o stronie,
-// // // // //                     a także linki do skryptów np. style.css czy script.js
+// // // // // <header></header> – вводная часть страницы или секции, обычно содержит логотип и навигацию.
 
-// // // // // <footer></footer> – stopka strony lub sekcji (np. prawa autorskie, linki).
+// // // // // <footer></footer> – «подвал» страницы или секции (авторские права, контакты, ссылки).
 
-// // // // // <main></main> – główna treść dokumentu, unikalna dla strony.
+// // // // // <main></main> – основное, уникальное содержимое документа.
 
-// // // // // <section></section> – wydzielona część treści (np. rozdział, dział tematyczny).
+// // // // // <section></section> – тематический раздел контента (глава, блок новостей).
 
-// // // // // <article></article> – samodzielny fragment treści (np. artykuł, wpis bloga).
+// // // // // <article></article> – независимый, самодостаточный фрагмент контента (статья, пост в блоге).
 
-// // // // // <nav></nav> – blok przeznaczony na nawigację (menu, linki).
+// // // // // <nav></nav> – блок для навигации (меню, ссылки).
 
-// // // // // <aside></aside> – treść poboczna (np. reklamy, dodatkowe informacje).
+// // // // // <aside></aside> – побочный контент, косвенно связанный с основным (сайдбар, реклама).
 
-// // // // // <div></div> – uniwersalny kontener do grupowania elementów.
+// // // // // <div></div> – универсальный блочный контейнер для группировки элементов.
 
 // // // // ---------------------------------------------------------------
 
-// // // // Tagi związane z tekstem / treścią:
+// // // // Теги для работы с текстом и контентом:
 
-// // // // <h1>–<h6> – nagłówki od najważniejszego (<h1>) do najmniej istotnego (<h6>).
+// // // // <h1>–<h6> – заголовки от самого важного (<h1>) до наименее значимого (<h6>).
 
-// // // // <p></p> – akapit tekstu.
+// // // // <p></p> – текстовый абзац.
 
-// // // // <span></span> – inline’owy kontener do zaznaczenia fragmentu tekstu.
+// // // // <span></span> – строчный (inline) контейнер для выделения фрагмента текста.
 
-// // // // <a href=""></a> – link prowadzący do innej strony lub sekcji.
+// // // // <a href=""></a> – ссылка на другую страницу или якорь внутри текущей.
 
-// // // // <strong></strong> – mocne wyróżnienie (semantycznie ważny tekst, zwykle pogrubiony).
+// // // // <strong></strong> – логическое выделение (важный текст, обычно отображается жирным).
 
-// // // // <em></em> – akcentowanie, uwypuklenie (podkreślenie znaczenia, zwykle kursywa).
+// // // // <em></em> – акцентирование текста (обычно отображается курсивом).
 
-// // // // <br> – złamanie linii (nowa linia).
+// // // // <br> – перенос строки (новая строка).
 
-// // // // <hr> – pozioma linia oddzielająca treść.
+// // // // <hr> – горизонтальная линия для разделения контента.
 
 // // // // ---------------------------------------------------------
 
-// // // // Tagi związane z multimediami:
+// // // // Теги для мультимедиа:
 
-// // // // <img src="" alt="" width="" height=""> – obrazek.
+// // // // <img src="" alt="" width="" height=""> – изображение.
 
-// // // // <video></video> – wideo osadzone na stronie.
+// // // // <video></video> – встроенное видео.
 
-// // // // <audio></audio> – plik dźwiękowy.
+// // // // <audio></audio> – аудиофайл.
 
-// // // // <figure></figure> – grupa elementów multimedialnych z podpisem.
+// // // // <figure></figure> – группировка мультимедийных элементов с подписью.
 
-// // // // <figcaption></figcaption> – podpis do <figure>.
+// // // // <figcaption></figcaption> – подпись к элементу <figure>.
 
 // // // // ----------------------------------------------------------------
 
-// // // // Tagi dotyczące list:
+// // // // Теги для списков и таблиц:
 
-// // // // <ul></ul> – lista nieuporządkowana (punktowana).
+// // // // <ul></ul> – неупорядоченный (маркированный) список.
 
-// // // // <ol></ol> – lista uporządkowana (numerowana).
+// // // // <ol></ol> – упорядоченный (нумерованный) список.
 
-// // // // <li></li> – element listy.
+// // // // <li></li> – элемент списка.
 
-// // // // <table></table> – tabela.
+// // // // <table></table> – таблица.
 
-// // // // <tr></tr> – wiersz tabeli.
+// // // // <tr></tr> – строка таблицы.
 
-// // // // <td></td> – komórka tabeli.
+// // // // <td></td> – ячейка таблицы.
 
-// // // // <th></th> – nagłówek tabeli.
+// // // // <th></th> – заголовок таблицы (ячейка-заголовок).
 
 // // // // ------------------------------------------------------
 
-// // // // Tagi związane m.in. z formularzami:
+// // // // Теги для форм:
 
-// // // // <form></form> – formularz.
+// // // // <form></form> – контейнер формы.
 
-// // // // <input> – pole do wprowadzania danych.
+// // // // <input> – поле для ввода данных пользователем.
 
-// // // // <label></label> – etykieta dla pola formularza.
+// // // // <label></label> – текстовая метка для поля ввода.
 
-// // // // <textarea></textarea> – pole tekstowe wielowierszowe.
+// // // // <textarea></textarea> – многострочное поле для ввода текста.
 
-// // // // <button></button> – przycisk.
+// // // // <button></button> – кнопка.
 
-// // // // <select></select> – lista rozwijana.
+// // // // <select></select> – выпадающий список.
 
-// // // // <option></option> – opcja w liście rozwijanej.
+// // // // <option></option> – пункт в выпадающем списке.
 
 // // // ------------------------------------------------------
 
-// // // Emmet - najważniejsze skróty w HTML:
+// // // Emmet - важнейшие сокращения для HTML:
 
-// // // | Skrót                                   | Co generuje                     | Opis                                                                         |
+// // // | Сокращение                             | Что генерирует                  | Описание                                                                     |
 // // // | --------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------- |
-// // // | `!`                                     | szablon HTML5                   | Pełny szkielet dokumentu (`<!DOCTYPE html>` + `<html>`, `<head>`, `<body>`). |
-// // // | `div.container`                         | `<div class="container"></div>` | Kropka (`.`) = klasa.                                                        |
-// // // | `div#header`                            | `<div id="header"></div>`       | Hash (`#`) = identyfikator.                                                  |
-// // // | `ul>li*5`                               | lista z 5 elementami            | `>` = zagnieżdżenie, `*` = powtórzenie.                                      |
-// // // | `nav>ul>li*3>a{Link $}`                 | menu z 3 linkami                | `{}` = treść, `$` = numeracja.                                               |
-// // // | `section>h2{Nagłówek}+p{Opis}`          | nagłówek + akapit               | `+` = element „obok” na tym samym poziomie.                                  |
-// // // | `form>input:text+input:password+button` | formularz logowania             | `:` = typ inputa.                                                            |
-// // // | `table>tr*2>td*3`                       | tabela 2x3                      | szybkie generowanie siatki.                                                  |
-// // // | `header+main+footer`                    | podstawowa struktura strony     | skrót często używany w projekcie startowym.                                  |
+// // // | `!`                                     | Шаблон HTML5                    | Полный скелет документа (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`).   |
+// // // | `div.container`                         | `<div class="container"></div>` | Точка (`.`) создает элемент с указанным классом.                             |
+// // // | `div#header`                            | `<div id="header"></div>`       | Решетка (`#`) создает элемент с указанным ID.                                |
+// // // | `ul>li*5`                               | Список с 5 элементами           | `>` — вложенность, `*` — повторение.                                         |
+// // // | `nav>ul>li*3>a{Link $}`                 | Меню с 3 ссылками               | `{}` — текст внутри, `$` — автоматическая нумерация.                         |
+// // // | `section>h2{Заголовок}+p{Описание}`     | Заголовок + абзац               | `+` — создание элемента на том же уровне (соседнего).                        |
+// // // | `form>input:text+input:password+button` | Форма логина                    | `:` — быстрый выбор типа input (text, password и т.д.).                      |
+// // // | `table>tr*2>td*3`                       | Таблица 2x3                     | Быстрое создание сетки таблицы.                                              |
+// // // | `header+main+footer`                    | Базовая структура страницы      | Самая частая комбинация для начала верстки.                                  |
 
 // // -----------------------------------------------------------
 
-// // WCAG + Semantyka:
+// // WCAG + Семантика (Доступность):
 
-// // Nagłówki w kolejności – nie przeskakuj od <h1> do <h4>.
-// // ✅ Tekst alternatywny (alt) dla obrazków – opisuj ich znaczenie.
-// // ✅ Kontrast kolorów – minimum 4.5:1 dla tekstu.
-// // ✅ Formularze z label – każdy <input> powinien mieć <label for="">.
-// // ✅ Przycisk a link – używaj <button> do akcji, <a> do nawigacji.
-// // ✅ ARIA (Accessible Rich Internet Applications) – tylko tam, gdzie HTML nie wystarcza (np. role="alert", aria-label).
-// // ✅ Nawigacja klawiaturą – wszystkie elementy powinny być dostępne przez Tab.
-// // ✅ Responsywność – stosuj jednostki względne (em, %, rem) zamiast sztywnych px.
+// // ✅ Заголовки по порядку — не перескакивайте, например, с <h1> сразу на <h4>.
+// // ✅ Альтернативный текст (alt) — всегда описывайте смысл изображений.
+// // ✅ Контрастность — минимум 4.5:1 для обычного текста.
+// // ✅ Формы с label — каждый <input> должен быть связан с <label for="">.
+// // ✅ Кнопка против Ссылки — используйте <button> для действий, а <a> для перехода.
+// // ✅ ARIA — используйте только там, где стандартного HTML не хватает (например, role="alert").
+// // ✅ Навигация с клавиатуры — все интерактивные элементы должны быть доступны через Tab.
+// // ✅ Респонсивность — используйте относительные единицы (em, %, rem) вместо жестких px.
