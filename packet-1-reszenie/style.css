@@ -5,3 +5,7 @@
 span {
   background-color: yellow;
 }
+
+section > h2 {
+  color: red;
+}
