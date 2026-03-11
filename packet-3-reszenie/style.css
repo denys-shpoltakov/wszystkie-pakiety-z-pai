@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: darkgray;
+  border: 1px solid black;
+  color: yellow;
+  padding: 50px;
+}
+
+main {
+  background-color: lightcoral;
+  border: 1px solid black;
+  color: aqua;
+  padding: 10px;
+  height: 600px;
+}
+
+footer {
+  background-color: aquamarine;
+  border: 1px solid black;
+  color: rgb(255, 0, 0);
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 40px;
+  margin: 20px;
+  border: 2px solid black;
+  /* box-shadow: 1px 1px 10px rgba(0, 0, 0); */
+  border-radius: 100px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+button {
+  margin-top: 188px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 175px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: 0.7s;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  transition: 0.7s;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-size: 50px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: darkred;
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 10px;
+  transition: 0.7s;
+}
+
+li a:hover {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+  transition: 0.7s;
+}
