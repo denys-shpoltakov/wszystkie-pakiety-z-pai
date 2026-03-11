@@ -1,0 +1,83 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.card {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  background-color: rgb(40, 121, 213);
+  transition: 1.3s;
+}
+
+h2 {
+  color: white;
+}
+
+h2 + p {
+  color: white;
+}
+
+.card:hover {
+  background-color: black;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.card:active {
+  transform: scale(0.9);
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+span {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
+.quote::before {
+  content: "«";
+  color: red;
+}
+
+.quote::after {
+  content: "»";
+  color: blue;
+}
+
+.quote::selection {
+  color: rgb(0, 0, 0);
+  background-color: yellow;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: 1px solid gold;
+  width: 600px;
+  height: 30px;
+  border-radius: 999px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  outline: none;
+  margin-top: 10px;
+  font-style: italic;
+}
