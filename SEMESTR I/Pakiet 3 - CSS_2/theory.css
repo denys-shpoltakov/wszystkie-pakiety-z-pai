@@ -91,10 +91,7 @@ grid-template-columns / rows – определение колонок и стр
 | text-decoration                 | Декор (underline, none, line-through)                      |
 | line-height                     | Межстрочный интервал                                       |
 | letter-spacing                  | Межбуквенный интервал                                      |
-| display                         | Способ отображения (block, inline, flex, grid, none)       |
-| position                        | Позиционирование (static, relative, absolute, fixed, sticky)|
-| top / right / bottom / left     | Смещения при позиционировании                              |
-| z-index                         | Порядок наложения слоев                                    |
+| display                         | Способ отображения (block, inline, flex, grid, none)       |                               |
 | float                           | Обтекание элемента (left, right)                           |
 | clear                           | Остановка обтекания (left, right, both)                    |
 | width / height                  | Ширина и высота                                            |
