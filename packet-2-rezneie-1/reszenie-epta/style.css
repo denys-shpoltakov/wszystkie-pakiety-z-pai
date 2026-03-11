@@ -1,0 +1,11 @@
+.nav1 {
+  margin: 30px;
+}
+
+.nav2:hover {
+  color: red;
+}
+
+.nav2::before {
+  content: "→";
+}

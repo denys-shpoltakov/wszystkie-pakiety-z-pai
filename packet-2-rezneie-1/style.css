@@ -1,0 +1,65 @@
+h2 {
+  color: blue;
+}
+
+p {
+  color: gray;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+#main {
+  width: 400px;
+  border: 2px solid black;
+}
+
+span {
+  color: red;
+}
+
+/* li > a {
+  color: green;
+} */
+
+h1 + p {
+  font-style: italic;
+}
+
+/*    */
+
+.pdf {
+  color: blue;
+}
+
+.pdf:hover {
+  color: red;
+}
+
+.pdf:active {
+  color: green;
+}
+
+/* li {
+  color: black;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:nth-child(even) {
+  color: gray;
+}
+
+a {
+}
+
+a::after {
+  content: "✔";
+}
+
+.pidr::first-letter {
+  font-weight: bold;
+}
