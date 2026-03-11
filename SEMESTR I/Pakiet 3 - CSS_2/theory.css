@@ -76,11 +76,6 @@ align-items – выравнивание по поперечной оси (flex/
 gap – расстояние между элементами в flex/grid.
 grid-template-columns / rows – определение колонок и строк в сетке.
 
-Полезные ресурсы:
-MDN CSS - https://developer.mozilla.org/ru/docs/Web/CSS
-W3Schools - https://www.w3schools.com/cssref/
-CSS Tricks - https://css-tricks.com/almanac/
-CodePen - https://codepen.io/
 
 ---------------------------------------------------------------------
 
@@ -140,26 +135,15 @@ CodePen - https://codepen.io/
 | ms      | Миллисекунды                                                 | Точные анимации                  |
 | deg     | Градусы (0–360)                                              | Поворот (rotate)                 |
 
-Другие единицы (используются реже):
-
-| Единица       | Описание                                                         |
-| ------------- | ---------------------------------------------------------------- |
-| cm            | Сантиметры (для печати)                                          |
-| mm            | Миллиметры (для печати)                                          |
-| in            | Дюймы (для печати)                                               |
-| pt            | Типографские пункты (1/72 дюйма)                                 |
-| pc            | Пика (12 пунктов)                                                |
-| vmin          | Процент меньшего измерения экрана                                |
-| vmax          | Процент большего измерения экрана                                |
-| dvw           | Dynamic viewport width                                           |
-| lvh / lvw     | Large viewport height/width (макс. размер экрана)                |
-| svh / svw     | Small viewport height/width (мин. размер экрана)                 |
-| rad           | Радианы (углы)                                                   |
-| turn          | Полные обороты (1turn = 360°)                                    |
-| dpi           | Точек на дюйм (печать, media queries)                            |
-| dpcm          | Точек на сантиметр                                               |
-| dppx          | Точек на пиксель устройства (1dppx = 96dpi)                      |
 
 Полезные ресурсы:
 https://htmlcheatsheet.com/css/
+*/
+
+/*Полезные ресурсы:
+MDN CSS - https://developer.mozilla.org/ru/docs/Web/CSS
+W3Schools - https://www.w3schools.com/cssref/
+CSS Tricks - https://css-tricks.com/almanac/
+CodePen - https://codepen.io/
+
 */
