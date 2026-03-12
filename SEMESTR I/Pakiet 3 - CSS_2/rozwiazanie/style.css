@@ -187,3 +187,22 @@ button {
 .card-title {
   margin-top: 10px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2rem;
+}
+
+input {
+  width: 150px;
+}
+
+textarea {
+  margin: 10px 0 10px 0;
+  width: 150px;
+}
+
+form button {
+  background-color: aqua;
+}
