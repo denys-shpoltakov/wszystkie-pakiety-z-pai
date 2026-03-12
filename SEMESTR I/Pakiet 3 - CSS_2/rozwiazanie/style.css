@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .rounded-div {
@@ -49,7 +50,6 @@ header {
 main {
   background-color: green;
   color: lightgreen;
-  padding: 10px;
 }
 
 footer {
@@ -86,4 +86,104 @@ nav a {
 
 nav a:hover {
   color: white;
+}
+
+.section-hero {
+  height: 100dvh;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.plate-red {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.plate-yellow {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+
+.plate-green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+.plate-blue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.plate-orange {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+}
+
+.plate-pink {
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+}
+
+.card-grid {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.card.premium {
+  padding: 20px;
+  border: 1px solid gold;
+  box-shadow: 2px 2px 5px gold;
+}
+
+.basic {
+  padding: 20px;
+}
+
+.card.standard {
+  border: 1px solid red;
+  box-shadow: 2px 2px 5px red;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* .card-grid {
+    flex-direction: column;
+  } */
+}
+
+.card-title {
+  margin-top: 10px;
 }
