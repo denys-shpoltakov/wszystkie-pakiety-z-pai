@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  background-image: url(https://images.wallpaperscraft.ru/image/single/gorod_kurort_arhitektura_135608_1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 2px solid rgba(191, 188, 188, 0.29);
+  color: azure;
+  width: 500px;
+  height: 600px;
+  border-radius: 150px;
+  backdrop-filter: blur(27px);
+  text-align: center;
+  font-style: italic;
+  transition: 1.2s;
+}
+
+.card.goldcard {
+  border: 2px solid gold;
+  transition: 1.2s;
+}
+
+.bob {
+  border-radius: 999px;
+  width: 260px;
+  height: 50px;
+  border: none;
+  background-color: aliceblue;
+  color: black;
+  font-style: italic;
+  margin-top: 63%;
+  font-size: 25px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.bob.gold {
+  background-color: rgb(255, 228, 72);
+  backdrop-filter: blur(10px);
+  transition: 0.7s;
+}
+
+.bob.gold:hover {
+  background: none;
+  border: 1.5px solid rgb(255, 228, 72);
+  transition: 0.7s;
+  box-shadow: 1px 1px 15px rgba(255, 228, 72);
+  color: azure;
+}
+
+.bob:hover {
+  background: none;
+  border: aliceblue;
+  transition: 0.7s;
+  box-shadow: 1px 1px 15px rgb(237, 236, 229);
+  color: azure;
+}
+
+footer {
+  color: azure;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  text-align: center;
+  flex: 0 0 auto;
+  padding: 50px;
+  margin-top: 50px;
+  backdrop-filter: blur(35px);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.card-title {
+  margin-top: 70px;
+  font-size: 40px;
+}
+
+.card.goldcard:hover {
+  box-shadow: 1px 1px 30px rgb(255, 228, 72);
+  transition: 0.7s;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 30px rgb(237, 236, 299);
+  transition: 0.7s;
+  transform: scale(1.08);
+}
