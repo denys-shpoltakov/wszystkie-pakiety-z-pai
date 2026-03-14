@@ -94,9 +94,9 @@ header:hover {
 .btn-about {
   position: relative;
   border: 1.5px solid transparent;
-  background:
+  /* background:
     linear-gradient(black, black) padding-box,
-    linear-gradient(to right, white, #ff00de, #7000ff, #00ff8c) border-box;
+    linear-gradient(to right, white, #ff00de, #7000ff, #00ff8c) border-box; */
 
   border-radius: 50px;
   color: white;
@@ -109,6 +109,8 @@ header:hover {
   align-items: center;
   transition: all 0.5s ease;
   z-index: 1;
+  background-color: black;
+  border: 1px solid white;
 }
 
 .btn-about span {
@@ -125,18 +127,19 @@ header:hover {
   height: 100%;
   width: 60%;
 
-  background: linear-gradient(to right, #ff00de, #7000ff);
+  /* background: linear-gradient(to right, #ff00de, #7000ff); */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: white;
+  color: rgb(0, 0, 0);
 
   z-index: 2;
 
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 1000px;
+  background-color: white;
 }
 
 .btn-about:hover {
