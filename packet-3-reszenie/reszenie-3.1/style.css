@@ -149,3 +149,8 @@ footer {
   transform: scale(1.1);
   filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.5));
 }
+
+.card.goldcard-pas:hover {
+  border-radius: 80px;
+  transition: 2s;
+}
