@@ -54,3 +54,103 @@ header:hover {
   width: 900px;
   transition: 0.6s;
 }
+
+.container {
+  border: 1px solid azure;
+  width: 1000px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 150px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo-about {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  margin: 20px auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hi-about {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.text-about {
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.btn-about {
+  position: relative;
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(black, black) padding-box,
+    linear-gradient(to right, white, #ff00de, #7000ff, #00ff8c) border-box;
+
+  border-radius: 50px;
+  color: white;
+  padding: 15px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.btn-about span {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.btn-about::after {
+  content: "БЕСПЛАТНО";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+
+  background: linear-gradient(to right, #ff00de, #7000ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+
+  z-index: 2;
+
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1000px;
+}
+
+.btn-about:hover {
+  padding-right: 50px;
+  border-radius: 1000px;
+}
+
+.btn-about:hover::after {
+  transform: translateX(0);
+  border-radius: 1000px;
+}
+
+.btn-about:hover span {
+  transform: translateX(-20px);
+  opacity: 0.7;
+  border-radius: 1000px;
+}
