@@ -17,6 +17,10 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 button a {
   text-decoration: none;
   font-weight: 100;
@@ -127,7 +131,35 @@ section#about {
   overflow: hidden;
 }
 
-.card-info a:hover {
+footer a:hover,
+header a:hover,
+#projects a:hover {
   transition: 0.3s;
   color: rgb(153, 153, 153);
+}
+
+#contact {
+  display: block;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
 }
