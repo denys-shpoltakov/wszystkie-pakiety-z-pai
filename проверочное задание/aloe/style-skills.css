@@ -54,3 +54,20 @@ header:hover {
   width: 900px;
   transition: 0.6s;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: aqua;
+  width: 1500px;
+  height: 400px;
+  border-radius: 100px;
+
+  margin: 20px auto;
+  margin-top: 10%;
+}
+
+.container div {
+  border: 1px solid black;
+  text-align: center;
+}
