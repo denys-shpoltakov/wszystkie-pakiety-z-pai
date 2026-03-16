@@ -63,6 +63,7 @@ header:hover {
   border-radius: 200px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -74,6 +75,7 @@ header:hover {
   height: 400px;
   border-radius: 100px;
   color: white;
+  flex-wrap: wrap;
 }
 
 .card-info {
